@@ -1,0 +1,101 @@
+@import url(http://fonts.googleapis.com/css2?family=Open+Sans&display=swap);
+header {
+  height: 100px;
+  max-width: 1000px;
+  margin: 20px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo_corretora {
+  max-width: 250px;
+  margin: 30px 30px 30px 0;
+}
+
+.menu_site {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+}
+
+.menu_site li {
+  list-style: none;
+  padding: 10px 20px 0;
+}
+
+.menu_site li:hover {
+  font-weight: bold;
+}
+
+.menu_site a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #071f3b;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.drop_seguros {
+  display: none;
+  position: absolute;
+  margin-left: -20px;
+  padding: 0px;
+  background-color: white;
+  font-weight: normal;
+}
+
+.menu_seguros:hover .drop_seguros {
+  display: block;
+}
+
+.search-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 30px;
+  height: 25px;
+}
+
+.search-box input {
+  max-width: 100px;
+  padding-left: 5px;
+  border-radius: 5px 0 0 5px;
+  border-right: none;
+  border: solid 1px #33629a;
+}
+
+.search-box button {
+  border-radius: 0 5px 5px 0;
+  border-left: none;
+  background-color: #33629a;
+  border: solid 1px #33629a;
+  color: white;
+}
+/*# sourceMappingURL=header.css.map */

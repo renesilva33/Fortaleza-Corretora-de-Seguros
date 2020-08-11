@@ -1,0 +1,8 @@
+@mixin centralizar($direcao) {
+    display: flex;
+    flex-direction: $direcao;
+    justify-content: space-between;
+    align-items: center;
+}
+$azulClaro:#33629a;
+$azulEscuro:#071f3b;

@@ -1,0 +1,66 @@
+@import './variaveis.scss';
+@import url(http://fonts.googleapis.com/css2?family=Open+Sans&display=swap);
+
+header {
+    height: 100px;
+    max-width: 1000px;
+    margin: 20px auto;
+    @include centralizar(row);
+    nav {
+    @include centralizar(row);
+    }
+}
+.logo_corretora {
+    max-width: 250px;
+    margin: 30px 30px 30px 0;
+}
+.menu_site {
+    display: flex;
+    padding: 0;
+    li {
+        list-style: none;
+        padding:  10px 20px 0;
+        &:hover{
+            font-weight: bold;
+        }}
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $azulEscuro;
+        font-family:  'Open Sans', sans-serif;
+    }
+}
+
+.drop_seguros {
+    display: none; 
+    position: absolute;
+    margin-left: -20px;
+    padding: 0px;
+    background-color:white;
+    font-weight: normal;
+}
+
+.menu_seguros:hover{
+    .drop_seguros{
+        display: block;
+    }}
+
+.search-box {
+    display: flex;
+    margin-left: 30px;
+    height: 25px;
+    input {
+        max-width: 100px;
+        padding-left: 5px;
+        border-radius: 5px 0 0 5px;
+        border-right: none;
+        border: solid 1px $azulClaro;
+    }
+    button {
+        border-radius: 0 5px 5px 0;
+        border-left: none;
+        background-color: $azulClaro;
+        border: solid 1px $azulClaro;
+        color: white;
+    }
+}
