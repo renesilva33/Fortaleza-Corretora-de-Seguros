@@ -4,5 +4,12 @@
     justify-content: space-between;
     align-items: center;
 }
+
+@mixin phone {
+    @media only screen and (max-width : 480px) {
+        @content;
+	}   
+}
+
 $azulClaro:#33629a;
 $azulEscuro:#071f3b;

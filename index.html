@@ -6,15 +6,16 @@
         <meta name="description" content="Homepage Fortaleza Corretora de Seguros">
         <meta name="keywords" content="Seguros, Segurança, ">
         <meta name="author" content="Rene Silva">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" type="text/css" href="styles/style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
             <a href=""><img class="logo_corretora"src="img/logo.png"></a>
             <nav>
+                <label for="menu-toggle" class="menu_toggle_icon"><i class="material-icons">menu</i></label>
+                <input type="checkbox" id="menu-toggle"/>
                 <ul class="menu_site">
                     <li><a href="">home</a></li>
                     <li class="menu_seguros"><a href="">seguros</a>
@@ -28,9 +29,12 @@
                     <li><a href="">blog</a></li>
                 </ul>
                 <div class="search-box">
-                    <input type="text" placeholder="Pesquisar...">
-                    <button type="submit"><i class="material-icons" >search</i></button>
+                    <form>
+                        <input type="text" placeholder="Pesquisar...">
+                        <button type="submit"><i class="material-icons" >search</i></button>
+                    </form>
                 </div>
+            </nav>
             </header>
         </body>
 </html>

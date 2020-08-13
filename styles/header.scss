@@ -5,14 +5,21 @@ header {
     height: 100px;
     max-width: 1000px;
     margin: 20px auto;
+    padding: 0 20px;
     @include centralizar(row);
     nav {
     @include centralizar(row);
-    }
+}
 }
 .logo_corretora {
     max-width: 250px;
-    margin: 30px 30px 30px 0;
+    margin: 20px 0;
+}
+.menu_toggle_icon {
+    display: none;
+}
+#menu-toggle {
+    display: none;
 }
 .menu_site {
     display: flex;
@@ -47,11 +54,16 @@ header {
 
 .search-box {
     display: flex;
+    align-items: flex-end;
     margin-left: 30px;
     height: 25px;
+    form {
+        display: flex;
+        align-items: flex-end;
+    }
     input {
         max-width: 100px;
-        padding-left: 5px;
+        padding: 5px;
         border-radius: 5px 0 0 5px;
         border-right: none;
         border: solid 1px $azulClaro;
@@ -62,5 +74,89 @@ header {
         background-color: $azulClaro;
         border: solid 1px $azulClaro;
         color: white;
+        height: 30px;
     }
 }
+@media (max-width: 768px){
+    header{
+        @include centralizar(column);
+        align-items: flex-start;
+        padding: 10px;
+        nav {
+            @include centralizar(column-reverse);
+            align-items: flex-end;
+            justify-content: center;
+            align-self: flex-end;
+            position: absolute;
+            margin-top: 20px;
+        }
+    }
+    .logo_corretora {
+        margin: 0;
+    }
+    .search-box {
+        margin: 0 15px 10px 0;
+    }
+
+}
+
+@media(max-width : 510px) {
+    header {
+         @include centralizar(row-reverse);
+         max-width: 100%;
+         padding: 10px;
+         align-items: flex-start;
+         nav {
+             @include centralizar(row);
+             align-items: flex-start;
+             align-self: flex-start;
+             position: relative;
+             margin: 0;
+            }
+        }
+    .menu_site {
+        @include centralizar(column);
+        display: none;
+        margin: 5px 0 0 30px;    
+    }
+    .menu_seguros{
+        &:hover {
+            background: $azulClaro;
+            border-bottom: white 1px solid;
+            a{
+                color:white;
+            }
+        }
+    }
+    .drop_seguros{
+        margin: -32px 0 0 95px;
+        background: $azulClaro;
+        li {
+            width: 150px;
+            border-bottom: white 1px solid;
+            border-left: white 1px solid;
+            a {
+                color: white;
+            }
+        }
+    }
+    
+    .logo_corretora {
+        max-width: 200px;
+        
+    }
+    .menu_toggle_icon {
+        display: block;
+        margin-left: 10px;
+        color: $azulEscuro;
+        position: fixed;
+    }
+    #menu-toggle {
+        &:checked + .menu_site {
+            display: block;
+            }
+        }
+        .search-box {
+            display: none;
+        }
+    }  

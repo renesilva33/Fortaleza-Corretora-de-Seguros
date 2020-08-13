@@ -10,6 +10,7 @@ header {
   height: 100px;
   max-width: 1000px;
   margin: 20px auto;
+  padding: 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,7 +44,15 @@ header nav {
 
 .logo_corretora {
   max-width: 250px;
-  margin: 30px 30px 30px 0;
+  margin: 20px 0;
+}
+
+.menu_toggle_icon {
+  display: none;
+}
+
+#menu-toggle {
+  display: none;
 }
 
 .menu_site {
@@ -86,13 +95,25 @@ header nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   margin-left: 30px;
   height: 25px;
 }
 
+.search-box form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
 .search-box input {
   max-width: 100px;
-  padding-left: 5px;
+  padding: 5px;
   border-radius: 5px 0 0 5px;
   border-right: none;
   border: solid 1px #33629a;
@@ -104,5 +125,155 @@ header nav {
   background-color: #33629a;
   border: solid 1px #33629a;
   color: white;
+  height: 30px;
+}
+
+@media (max-width: 768px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 10px;
+  }
+  header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    position: absolute;
+    margin-top: 20px;
+  }
+  .logo_corretora {
+    margin: 0;
+  }
+  .search-box {
+    margin: 0 15px 10px 0;
+  }
+}
+
+@media (max-width: 510px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 100%;
+    padding: 10px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    position: relative;
+    margin: 0;
+  }
+  .menu_site {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: none;
+    margin: 5px 0 0 30px;
+  }
+  .menu_seguros:hover {
+    background: #33629a;
+    border-bottom: white 1px solid;
+  }
+  .menu_seguros:hover a {
+    color: white;
+  }
+  .drop_seguros {
+    margin: -32px 0 0 95px;
+    background: #33629a;
+  }
+  .drop_seguros li {
+    width: 150px;
+    border-bottom: white 1px solid;
+    border-left: white 1px solid;
+  }
+  .drop_seguros li a {
+    color: white;
+  }
+  .logo_corretora {
+    max-width: 200px;
+  }
+  .menu_toggle_icon {
+    display: block;
+    margin-left: 10px;
+    color: #071f3b;
+    position: fixed;
+  }
+  #menu-toggle:checked + .menu_site {
+    display: block;
+  }
+  .search-box {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
